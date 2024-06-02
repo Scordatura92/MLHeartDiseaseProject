@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+</head>
+<body>
+    <h1>Heart Disease Prediction</h1>
+    
+    <form action="/predict" method="POST">
+        <label for="Age">Age</label>
+        <input type="text" name="Age" placeholder="Age in years"><br>
+        
+        <label for="Resting_Blood_Pressure">Resting Blood Pressure</label>
+        <input type="text" name="Resting_Blood_Pressure" placeholder="mm Hg"><br>
+
+        <label for="Cholesterol_Measure">Serum Cholesterol Measure</label>
+        <input type="text" name="Cholesterol_Measure" placeholder="mg/dl"><br>
+
+        <label for="Fasting_Blood_Sugar">Is Your Fasting Blood Sugar More Than 120mg/dl?</label>
+        <input type="text" name="Fasting_Blood_Sugar" placeholder="Fill in 1 for yes and 0 for no"><br>
+
+        <label for="Max_heart_rate">Max Heart Rate Achieved</label>
+        <input type="text" name="Max_heart_rate" placeholder="bpm"><br>
+
+        <label for="Exercise_induced_angina">Do You Experience Exercise-Induced Angina (Chest Pain Due to Exercise)?</label>
+        <input type="text" name="Exercise_induced_angina" placeholder="1 for yes and 0 for no"><br>
+        
+        <label for="ST_Depression">ST Depression From Exercise Relative to Rest</label>
+        <input type="text" name="ST_Depression" placeholder="ST Depression"><br>
+        
+        <label for="colored_vessels">Major Vessels colored by Fluoroscopy</label>
+        <input type="text" name="colored_vessels" placeholder="0-3"><br>
+
+        <label for="sex">Sex (Fill 1 for Yes and 0 for No)</label>
+        <input type="text" name="sex_female" placeholder="Female">
+        <input type="text" name="sex_male" placeholder="Male"><br>
+
+        <label for="chest_pain_type">Chest Pain Type (Fill 1 to choose type or 0 if you do not feel chest pain)</label>
+        <input type="text" name="chest_pain_type_atypical" placeholder="Atypical Angina">
+        <input type="text" name="chest_pain_type_non" placeholder="Non-Anginal Pain">
+        <input type="text" name="chest_pain_type_typical" placeholder="Typical Angina">
+        <br>
+
+        <label for="restecg">Resting ECG Abnormality(Fill 1 to choose type or 0 ECG is normal)</label>
+        <input type="text" name="restecg_hyper" placeholder="LV Hyperthrophy">
+        <input type="text" name="restecg_st" placeholder="ST-T Abnormality">
+        <br>
+
+
+        <label for="slope">Slope of ST Segment at Peak Exercise</label>
+        <input type="text" name="slope_down" placeholder="Downsloping">
+        <input type="text" name="slope_flat" placeholder="Flat">
+        <input type="text" name="slope_up" placeholder="Upsloping"><br>
+
+
+        <label for="thal">Type of Thalassemia (Fill 1 to choose type or 0 if you do not have thalassemia)</label>
+        <input type="text" name="thal_fixed" placeholder="Fixed Defect">
+        <input type="text" name="thal_reversable" placeholder="Reversable Defect"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+    <h4>
+        {{prediction_text}}
+    </h4>
+</body>
+</html>
